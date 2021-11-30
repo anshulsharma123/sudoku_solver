@@ -1,0 +1,19 @@
+$purple: #5c63ab;
+$orange: #ff826d;
+$peach: #ffa583;
+$green: #2a9d8f;
+$yellow: #e9c46a;
+$grey: #8c8c8c;
+$black: black;
+$white: white;
+
+@mixin gradient($color1, $color2) {
+    background: -webkit-linear-gradient($color1, $color2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin justify($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

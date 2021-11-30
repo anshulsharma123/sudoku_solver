@@ -1,0 +1,189 @@
+#action {
+    height: 110vh;
+    background-color: $purple;
+    padding-bottom: 2rem;
+
+    .action-hero {
+        @include justify(space-between, center);
+        flex-direction: column;
+        position: relative;
+
+        .action-hero-heading {
+            font-family: 'Amatic SC', cursive;
+            font-size: 4rem;
+            color: $white;
+            margin: 2rem 0;
+            @include media('<=desktop', '>tablet') {
+                font-size: 3rem;
+            }
+            @include media('<=phone') {
+                font-size: 2rem;
+            }
+        }
+        .action-hero-btns {
+            @include media('<=phone') {
+                @include justify(center, center);
+                flex-wrap: wrap;
+                width: 350px;
+            }
+
+            .btn {
+                button {
+                    width: 15rem;
+                    height: 15rem;
+                    cursor: pointer;
+                    position: absolute;
+                    border: 2px solid $black;
+                    border-radius: 100%;
+                    background-color: $black;
+                    color: $white;
+                    font-family: 'Amatic SC', cursive;
+                    font-size: 5rem;
+                    transition: 0.3s ease;
+                    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.25);
+
+                    @include justify(center, center);
+
+                    @include media('<=phone') {
+                        margin: 10px;
+                    }
+                    &#check {
+                        width: 12rem;
+                        height: 12rem;
+                        top: 20%;
+                        left: 5%;
+                        color: $green;
+                        &:hover {
+                            width: 15rem;
+                            height: 15rem;
+                        }
+                        @include media('<=desktop') {
+                            width: 10rem;
+                            height: 10rem;
+                        }
+                        @include media('<=tablet') {
+                            left: 2%;
+                            top: 2%;
+                        }
+                        @include media('<=phone') {
+                            position: relative;
+                            width: 6rem;
+                            height: 6rem;
+                            font-size: 2.5rem;
+                            &:hover {
+                                width: 6rem;
+                                height: 6rem;
+                                box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+                    &#solve {
+                        width: 16rem;
+                        height: 16rem;
+                        font-size: 6rem;
+                        bottom: 1%;
+                        left: 10%;
+                        color: $yellow;
+                        &:hover {
+                            width: 18rem;
+                            height: 18rem;
+                        }
+                        @include media('<=desktop') {
+                            width: 12rem;
+                            height: 12rem;
+                        }
+                        @include media('<=tablet') {
+                            left: 2%;
+                            bottom: -22%;
+                        }
+                        @include media('<=phone') {
+                            position: relative;
+                            width: 6rem;
+                            height: 6rem;
+                            font-size: 2.5rem;
+                            &:hover {
+                                width: 6rem;
+                                height: 6rem;
+                                box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+                    &#clear {
+                        width: 8rem;
+                        height: 8rem;
+                        font-size: 3rem;
+                        bottom: 1%;
+                        right: 20%;
+                        color: $orange;
+                        &:hover {
+                            width: 10rem;
+                            height: 10rem;
+                        }
+                        @include media('<=desktop') {
+                            width: 8rem;
+                            height: 8rem;
+                        }
+                        @include media('<=tablet') {
+                            right: 2%;
+                            bottom: -20%;
+                        }
+                        @include media('<=phone') {
+                            position: relative;
+                            width: 6rem;
+                            height: 6rem;
+                            font-size: 2.5rem;
+                            &:hover {
+                                width: 6rem;
+                                height: 6rem;
+                                box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+                    &#new {
+                        width: 14rem;
+                        height: 14rem;
+                        font-size: 4rem;
+                        top: 30%;
+                        right: 10%;
+                        &:hover {
+                            width: 16rem;
+                            height: 16rem;
+                        }
+                        @include media('<=desktop') {
+                            font-size: 2rem;
+                            width: 10rem;
+                            height: 10rem;
+                            top: 20%;
+                        }
+                        @include media('<=tablet') {
+                            right: 2%;
+                            top: 2%;
+                        }
+                        @include media('<=phone') {
+                            position: relative;
+                            width: 7rem;
+                            height: 7rem;
+                            font-size: 2.5rem;
+                            &:hover {
+                                width: 7rem;
+                                height: 7rem;
+                                box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                        &.disabled {
+                            opacity: 0.7;
+                            cursor: default;
+                            font-size: 3rem;
+                            @include media('<=desktop') {
+                                font-size: 2rem;
+                            }
+                            @include media('<=phone') {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

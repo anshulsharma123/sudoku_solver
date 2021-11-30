@@ -21,6 +21,7 @@ const Action = () => {
         setUsed(true);
         document.getElementById('new').classList.add('disabled');
         const newEasySudoku = easy();
+        console.log(newEasySudoku);
         return setSudoku(newEasySudoku);
     };
     const checkAnswer = () => {

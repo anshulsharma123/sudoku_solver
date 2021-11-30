@@ -1,0 +1,44 @@
+.block {
+    &-even {
+        @include justify(center, center);
+        border: 2px solid $yellow;
+        border-radius: 1rem;
+        margin: 2px;
+
+        .row {
+            width: 4rem;
+            height: 4rem;
+            border: 2px solid $yellow;
+            border-radius: 0.5rem;
+            @include media('<=desktop', '>tablet') {
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            @include media('<=phone') {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+    &-odd {
+        @include justify(center, center);
+        border: 2px solid $orange;
+        border-radius: 1rem;
+        margin: 2px;
+        .row {
+            width: 4rem;
+            height: 4rem;
+            border: 2px solid $orange;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            @include media('<=desktop', '>tablet') {
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            @include media('<=phone') {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}

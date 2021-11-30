@@ -1,0 +1,115 @@
+.footer {
+    height: 35vh;
+    background-color: $black;
+    position: relative;
+    @include media('<=phone') {
+        height: 20vh;
+    }
+    .footer-inner {
+        height: 80%;
+        padding: 1% 10%;
+        @include justify(space-between, center);
+        .footer-left {
+            height: 100%;
+            width: 50%;
+            @include justify(center, flex-start);
+            flex-direction: column;
+            color: white;
+            h3 {
+                color: $green;
+                margin-bottom: 10px;
+                font-size: 1.8rem;
+                @include media('<=phone') {
+                    font-size: 1.2rem;
+                }
+            }
+            p {
+                margin: 5px 0;
+                color: $yellow;
+                font-size: 1.5rem;
+                @include media('<=phone') {
+                    font-size: 1rem;
+                }
+                a {
+                    text-decoration: none;
+                    color: $yellow;
+                    transition: 0.2s ease;
+                    &:hover {
+                        font-size: 1.6rem;
+                        text-shadow: 2px 2px 5px $orange;
+                    }
+                }
+            }
+        }
+        .footer-right {
+            @include justify(center, flex-end);
+            flex-direction: column;
+            height: 100%;
+            width: 50%;
+            color: white;
+            h3 {
+                padding-right: 8%;
+                margin-top: 10px;
+                color: $green;
+                margin-bottom: 10px;
+                font-size: 1.8rem;
+                @include media('<=phone') {
+                    font-size: 1.2rem;
+                }
+            }
+            .links {
+                @include justify(center, center);
+                svg {
+                    margin: 5px 5px;
+                    width: 30px;
+                    height: 30px;
+                    transition: 0.3s ease;
+                    border-radius: 100%;
+                    &:hover {
+                        box-shadow: 0 0 2px 2px $yellow;
+                    }
+                    @include media('<=phone') {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    &.github {
+                        fill: $orange;
+                    }
+                    &.linkedin {
+                        fill: $yellow;
+                    }
+                }
+            }
+            .copyright {
+                font-size: 1.2rem;
+                color: $grey;
+                @include media('<=phone') {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    #footer-dots {
+        width: 10%;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    #visit {
+        text-align: center;
+        width: 10%;
+        color: $white;
+        font-size: 3rem;
+        font-family: 'Amatic SC', cursive;
+        margin: auto;
+        position: absolute;
+        bottom: 30%;
+        left: 0;
+        right: 0;
+        @include media('<=phone') {
+            display: none;
+        }
+    }
+}

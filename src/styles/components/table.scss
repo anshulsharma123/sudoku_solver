@@ -1,0 +1,17 @@
+.table {
+    @include justify(center, center);
+    flex-wrap: wrap;
+    height: 40rem;
+    width: 40rem;
+    border: 5px solid $yellow;
+    border-radius: 1rem;
+    position: relative;
+    @include media('<=desktop', '>tablet') {
+        width: 28rem;
+        height: 28rem;
+    }
+    @include media('<=phone') {
+        width: 22rem;
+        height: 22rem;
+    }
+}
